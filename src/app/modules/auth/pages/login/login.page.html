@@ -1,0 +1,71 @@
+<!-- <div *ngFor="let persona of personas">
+    <h5
+        [ngStyle]="{ 'color': persona.type === 'maestro' ? 'red' : persona.type === 'estudiante' ? 'green' : 'blue' }"
+        [ngClass]="{ 
+            'active': persona.active,
+            'no___active': !persona.active,
+            'is__teacher': persona.type === 'maestro',
+            'is__student': persona.type === 'estudiante',
+            'is__admin': persona.type === 'directivo' }">
+        {{persona.name}}</h5> 
+        <app-persona [name]="persona.name" (onClick)="clickParent($event)"></app-persona>
+</div>
+
+<ul>
+    <li *ngFor="let name of infoService.names">
+        <ejercicio-uno [name]="name"></ejercicio-uno>
+    </li>
+</ul>
+
+<hr>
+<p>{{'3.1416'| number: '1.0-0' }}</p>
+<p>{{ '400'| currency}}</p>
+
+<hr>
+<p>{{parseKm.miles}}</p>
+<input [(ngModel)]="parseKm.kilometers" type="number" (input)="parseKm.convert()">
+
+<button (click)="sendRegister()" >Send Register</button>
+
+
+    <input type="text"  [(ngModel)]="name" appTitleCase>
+
+    <custom-component>
+        demas routing
+    </custom-component>
+
+   -->
+<h4 class="title display-1">{{title}}</h4>
+<p class="content display-4" *ngIf="showContent">{{content}}</p>
+<button class="button" (click)="onClick()" *ngIf="showButton">ClickMee!</button>
+
+<button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button>
+<mat-card>
+    <mat-card-content>Simple card</mat-card-content>
+</mat-card>
+<br>
+<button mat-flat-button color="primary">Primary</button>
+<mat-spinner></mat-spinner>
+<div>
+    <h1 class="lead">Login {{count}}</h1>
+    <div>
+        <label>Correo electronico</label>
+        <br>
+        <input type="text" [(ngModel)]="email">
+    </div>
+    <div>
+        <label>Contraseña</label>
+        <br>
+        <input type="password" [(ngModel)]="password">
+    </div>
+    <button (click)="login()">Iniciar Sesion</button>
+</div>

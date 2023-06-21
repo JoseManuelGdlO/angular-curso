@@ -1,0 +1,48 @@
+
+<form [formGroup]="myForm" (ngSubmit)="saveUser()">
+    <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" formControlName="name">
+    </div>
+
+    <div>
+        <label for="lastname">Apellido:</label>
+        <input type="text" id="lastname" formControlName="lastname">
+    </div>
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" formControlName="email">
+        <span *ngIf="myForm.controls.email.dirty && myForm.controls.email.errors">
+            <span *ngIf="myForm.controls.email.errors['required']">
+                El email es requerido
+            </span>
+            <span *ngIf="myForm.controls.email.errors['email']">
+                el formato del email no es correcto
+            </span>
+        </span>
+    </div>
+
+
+    <div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" formControlName="password">
+    </div>
+
+    <div>
+        <label for="number">Numero de telefono:</label>
+        <input type="number" id="number" formControlName="number">
+        <span *ngIf="myForm.controls.number.errors">
+            <span *ngIf="myForm.controls.number.errors['required']">
+                El numero es requerido
+            </span>
+            <span *ngIf="myForm.controls.number.errors['phonenumberinvalid']">
+                El numeor de teleofno no contiene 618
+            </span>
+        </span>
+    </div>
+
+    <button type="submit" [disabled]="myForm.invalid">Guardar</button>
+
+
+</form>

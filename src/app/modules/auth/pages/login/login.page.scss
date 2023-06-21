@@ -1,0 +1,25 @@
+
+
+.active {
+    font-size: 20px;
+}
+
+.no___active {
+    font-size: 10px;
+}
+
+.is__teacher {
+    background-color: grey;
+    text-transform: uppercase;
+}
+
+.is__student {
+    background-color: rgb(255, 187, 187);
+    text-transform: lowercase;
+}
+
+.is__admin {
+    background-color: rgb(156, 81, 81);
+    text-transform: capitalize;
+
+}
