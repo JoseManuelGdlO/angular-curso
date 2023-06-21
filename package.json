@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:stagin": "ng serve --configuration stagin",
-    "start:prod": "ng serve --configuration production"
+    "start:prod": "ng serve --configuration production",
+    "build:stagin": "ng build --configuration stagin",
+    "build:prod": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {

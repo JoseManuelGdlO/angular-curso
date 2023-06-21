@@ -50,9 +50,9 @@ export class LoginPage implements OnInit {
     ngOnInit(): void {
        this.authService.init()
        this._snackBar.open('Bienvenido a la app', 'Cerrar');
+            this.logger.log('Contador observable ');
 
         const subscription = this.authService.contadorObservable.subscribe((value) => {
-           // console.log(value) 
             this.count = value 
         })
 
