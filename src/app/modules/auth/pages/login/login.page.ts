@@ -7,6 +7,7 @@ import { AuthService } from "src/app/shared/services/auth.service";
 import { InfoService } from "src/app/shared/services/info.service";
 import { LoggerService } from "src/app/shared/services/logger.service";
 import { ParseKMToMilesService } from "src/app/shared/services/transformkmtomiles.service";
+import { environment } from "src/environments/environment";
 
 @Component({
     templateUrl: './login.page.html',
@@ -33,6 +34,8 @@ export class LoginPage implements OnInit {
     showContent = true
     showButton = false
 
+    environmentTitle = environment.titlePrincipal
+
     @Output() buttonClick = new EventEmitter();
 
     constructor(
@@ -50,7 +53,7 @@ export class LoginPage implements OnInit {
 
         const subscription = this.authService.contadorObservable.subscribe((value) => {
            // console.log(value) 
-            this.count = value
+            this.count = value 
         })
 
     }

@@ -41,6 +41,12 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -54,6 +60,14 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "stagin": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.stagin.ts"
+                }
+              ]
             },
             "development": {
               "buildOptimizer": false,
@@ -71,6 +85,9 @@
           "configurations": {
             "production": {
               "browserTarget": "angular-curso:build:production"
+            },
+            "stagin": {
+              "browserTarget": "angular-curso:build:stagin"
             },
             "development": {
               "browserTarget": "angular-curso:build:development"

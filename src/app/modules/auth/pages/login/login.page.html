@@ -35,7 +35,8 @@
     </custom-component>
 
    -->
-<h4 class="title display-1">{{title}}</h4>
+<h1>{{environmentTitle}}</h1>
+<h4 class="title display-2">{{title}}</h4>
 <p class="content display-4" *ngIf="showContent">{{content}}</p>
 <button class="button" (click)="onClick()" *ngIf="showButton">ClickMee!</button>
 
@@ -63,7 +64,7 @@
         <input type="text" [(ngModel)]="email">
     </div>
     <div>
-        <label>Contraseña</label>
+        <label>Contraseña 2</label>
         <br>
         <input type="password" [(ngModel)]="password">
     </div>
